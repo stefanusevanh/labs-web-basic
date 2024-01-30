@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700");
+
+$blue-page-color: #037de8;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar {
+  padding: 1rem 0;
+  font-weight: 600;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      text-transform: uppercase;
+    }
+    .active {
+      color: $blue-page-color !important;
+    }
+  }
+
+  #navbarNavAltMarkup {
+    justify-content: flex-end;
+  }
+
+  .is-not-logged {
+    display: block;
+  }
+  .is-logged {
+    display: none;
+  }
+}
+
+.hero-carousel.carousel {
+  margin-bottom: 2.5rem;
+
+  .carousel-caption {
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    right: 0;
+    left: 0;
+    bottom: 1.75rem;
+    background: rgba($color: white, $alpha: 0.2);
+
+    &__textblock {
+      background: white;
+      width: 22.5rem;
+      margin: 0 auto;
+      padding: 1.5rem;
+      background: rgba($color: white, $alpha: 0.6);
+    }
+    h5 {
+      font-size: 2.2rem;
+      font-weight: 900;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0.5rem;
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0.65rem;
+    button {
+      height: 0.575rem !important;
+      width: 1.5rem;
+      border-radius: 5rem;
+      border: 1px;
+      background-color: black;
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.modal-dialog {
+  max-width: fit-content;
+
+  .modal-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .card {
+    &:not(:last-child),
+    &:last-child {
+      border: 1px solid rgb(240, 240, 240);
+    }
+  }
+
+  .card-group {
+    gap: 1rem;
+  }
+
+  .card-body {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    h5.card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    p.card-text {
+      color: $blue-page-color;
+      font-style: italic;
+      font-size: 1.25rem;
+    }
+  }
+
+  .list-group-item {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+}
+
+.featured-courses {
+  margin-bottom: 4.5rem;
+  .card {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-content: center;
+    gap: 1.5rem;
+
+    img {
+      padding: 0 40%;
+      border-bottom-right-radius: 35rem 5rem;
+      border-bottom-left-radius: 35rem 5rem;
+
+      // border-radius: 0 0 2rem/10rem;
+      object-fit: contain;
+      height: 8rem;
+      width: 100%;
+    }
+
+    .card-img-top {
+      &--red {
+        background: #ed5440;
+      }
+
+      &--purple {
+        background: #d866b2;
+      }
+      &--green {
+        background: #4ac467;
+      }
+      &--blue {
+        background: #2aaef0;
+      }
+    }
+
+    .card-body {
+      padding: 1rem;
+      &__head {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      &__text {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__head {
+    text-align: center;
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin-bottom: 4.5rem;
+      color: grey;
+    }
+  }
+}
+
+.testimony-carousel {
+  padding: 2.5rem 0;
+  margin: 0 auto;
+  background: #efefef;
+  height: max-content;
+  text-align: center;
+
+  .carousel-indicators {
+    margin-bottom: 0;
+    position: inherit;
+    align-items: center;
+
+    button {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 100%;
+      background: white;
+      border: 1px solid #a9a9a9;
+
+      &.active {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+
+  .carousel {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 1rem 0;
+
+    &::before,
+    &::after {
+      content: " - ";
+    }
+  }
+}
+
+.courses-offer {
+  margin: 2.5rem auto;
+
+  &__head {
+    text-align: center;
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: grey;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    &__item {
+      background-color: #efefef;
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+      p {
+        color: grey;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $blue-page-color;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 2.5rem 0 4rem 0;
+  }
+
+  &__item {
+    &__head {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      &__company-address {
+        margin-bottom: 1rem;
+      }
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+
+    a {
+      &:link,
+      &:visited {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__extras {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    padding-bottom: 1.5rem;
+
+    &__socials {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0.3rem;
+      }
+    }
+  }
+}
+
+@import "general-page-structure";
+@import "about_us";
+@import "courses";
+@import "portfolio";
+@import "contact";
+
+@import "register";
+@import "login";
+
+// Media queries
+@media screen and (max-width: 600px) {
+  .footer {
+    &__grid-container {
+      grid-template-columns: 1fr;
+    }
+    &__extras {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .featured-courses {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .courses-offer {
+    &__body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .courses-offer {
+    &__body {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .featured-courses {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

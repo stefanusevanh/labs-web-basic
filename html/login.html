@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Web Basic</title>
+
+    <!-- Bootstrap Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body class="login">
+    <div class="login__img">
+      <img src="/assets/img/login-bg.svg" />
+    </div>
+    <section class="login__form">
+      <h1>
+        <p>Brand</p>
+        <p class="colored">Name</p>
+      </h1>
+      <div class="login__form__container">
+        <h2>Welcome</h2>
+        <p>Login here to access your account</p>
+        <form
+          class="needs-validation"
+          id="contact_us_form"
+          novalidate
+          onsubmit="loginSuccess()"
+          action="/index.html"
+        >
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Input your email"
+              required
+            />
+            <div class="invalid-feedback">Please input valid email address</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Create new password"
+              required
+            />
+            <div class="invalid-feedback">Please input password</div>
+          </div>
+          <div class="login__buttons">
+            <button class="btn btn-primary" type="submit">Login</button>
+            <div class="horizontal-border"></div>
+            <button class="btn btn-outline-primary" type="submit">
+              <img src="/assets/img/icons-svg/google.svg" />
+              <p>Login with Google</p>
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-small">
+          Don't have an account? <a href="/html/register.html">Sign Up</a>
+        </p>
+      </div>
+    </section>
+  </body>
+  <script>
+    (() => {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+
+    function loginSuccess() {
+      const loggedEmail = document.getElementById("email").value;
+      localStorage.setItem("loggedEmail", JSON.stringify(loggedEmail));
+    }
+  </script>
+</html>

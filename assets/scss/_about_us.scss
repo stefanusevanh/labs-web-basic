@@ -1,0 +1,158 @@
+main {
+  p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: grey;
+  }
+}
+
+.section {
+  &__awesome-team {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    button {
+      width: fit-content;
+    }
+
+    &__extra-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      img {
+        object-fit: contain;
+        width: 50%;
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        justify-content: center;
+        li {
+          list-style-image: url(/assets/img/icons-svg/right-arrow-grey.svg);
+        }
+      }
+    }
+  }
+
+  &__choose-us {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    border-top: 1px solid rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(241, 241, 241);
+    padding-bottom: 1.5rem;
+
+    &__1 {
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+
+    &__2 {
+      .accordion-button {
+        background: #b9b9b9;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 400;
+        &::after {
+          content: none;
+        }
+        &::before {
+          background-image: url(/assets/img/icons-svg/right-chevron-white.svg);
+          background-size: 0.65rem 0.65rem;
+          content: "";
+          width: 0.65rem;
+          height: 0.65rem;
+          display: inline-block;
+          margin: auto 1rem auto 0;
+        }
+        &:not(.collapsed)::before {
+          transform: rotate(90deg);
+          transition: transform 0.2s ease-in-out;
+        }
+        &.collapsed::before {
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+
+      h2.accordion-header {
+        margin: 0.5rem 0;
+      }
+      .accordion-item {
+        border: none;
+      }
+    }
+
+    &__3 {
+      &__bar {
+        .progress {
+          height: 0.5rem;
+          margin: 1rem 0;
+        }
+
+        h3 {
+          font-size: 0.85rem;
+          font-weight: 700;
+        }
+        &--web-dev {
+          background-color: #ed5440;
+          width: 40%;
+        }
+        &--designing {
+          background-color: #46b658;
+          width: 60%;
+        }
+        &--ux {
+          background-color: #34c8de;
+          width: 90%;
+        }
+        &--dev {
+          background-color: #4288c7;
+          width: 30%;
+        }
+      }
+    }
+  }
+  &__our-team {
+    margin-bottom: 1.5rem;
+    &__photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      gap: 2rem;
+      .card {
+        border: none;
+        background-color: #f9f9f9;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+        h4 {
+          font-size: 1rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    &__awesome-team {
+      &__extra-body {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          // min-width: 3;
+        }
+      }
+    }
+  }
+}

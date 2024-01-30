@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Web Basic</title>
+
+    <!-- Bootstrap Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg main-container">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+            <a class="nav-link active" href="/html/about_us.html">About Us</a>
+            <a class="nav-link" href="/html/courses.html">Courses</a>
+            <a class="nav-link" href="/html/portfolio.html">Portfolio</a>
+            <a class="nav-link" href="/html/contact.html">Contact</a>
+            <a
+              class="nav-link is-not-logged"
+              id="tracker-nav"
+              href="/html/tracker.html"
+              >Tracker</a
+            >
+            <a class="nav-link is-logged" id="login-nav" href="/html/login.html"
+              >Login</a
+            >
+            <a
+              class="nav-link is-logged"
+              id="register-nav"
+              href="/html/register.html"
+              >Register</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <h1 class="main-container">About Us</h1>
+    </header>
+    <main class="main-container">
+      <section class="section__awesome-team">
+        <h2>We are awesome TEAM</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+          elementum mauris nunc, nec aliquam lectus suscipit a. Donec id luctus
+          elit, id convallis lorem. Aenean vel eros sed tortor porttitor commodo
+          in vitae elit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+          elementum mauris nunc, nec aliquam lectus suscipit a. Donec id luctus
+          elit, id convallis lorem. Aenean vel eros sed tortor porttitor commodo
+          in vitae elit.
+        </p>
+        <button type="button" class="btn btn-primary">Read more</button>
+
+        <div class="section__awesome-team__extra-body">
+          <img
+            src="/assets/img/section-image-1.png"
+            alt="Five people standing"
+          />
+          <div class="section__awesome-team__extra-body__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>
+                Nulla venenatis interdum ex, vitae laoreet eros consequat sed. N
+              </li>
+              <li>
+                Nunc elementum mauris nunc, nec aliquam lectus suscipit a.
+              </li>
+              <li>Donec id luctus elit, id convallis lorem.</li>
+              <li>
+                Aenean vel eros sed tortor porttitor commodo in vitae elit.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__choose-us">
+        <div class="section__choose-us__1">
+          <h2>Why Choose Us?</h2>
+          <div class="section__choose-us__1__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+              elementum mauris nunc, nec aliquam lectus suscipit a. Donec id
+              luctus elit, id convallis lorem. Aenean vel eros sed tortor
+              porttitor commodo in vitae elit. Vivamus tincidunt, urna quis
+              posuere condimentum, orci lectus convallis risus, commodo pulvinar
+              quam dolor non eros.
+            </p>
+            <p>
+              Pellentesque eget pretium leo. Vivamus tempus enim non rhoncus
+              efficitur. Integer a gravida dolor.
+            </p>
+          </div>
+        </div>
+        <div class="section__choose-us__2">
+          <h2>Our Solution</h2>
+          <div class="accordion accordion-flush" id="oursolution-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Accordion Heading Text Item #1
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#oursolution-accordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+                  elementum mauris nunc, nec aliquam lectus suscipit a.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Accordion Heading Text Item #2
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#oursolution-accordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+                  elementum mauris nunc, nec aliquam lectus suscipit a.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Accordion Heading Text Item #3
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#oursolution-accordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+                  elementum mauris nunc, nec aliquam lectus suscipit a.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Accordion Heading Text Item #4
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#oursolution-accordion"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+                  elementum mauris nunc, nec aliquam lectus suscipit a.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__choose-us__3">
+          <h2>Our Expertise</h2>
+          <div class="section__choose-us__3__bar">
+            <div>
+              <h3>Web Development</h3>
+              <div class="progress" role="progressbar">
+                <div
+                  class="progress-bar section__choose-us__3__bar--web-dev"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <h3>Designing</h3>
+              <div class="progress" role="progressbar">
+                <div
+                  class="progress-bar section__choose-us__3__bar--designing"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <h3>User Experience</h3>
+              <div class="progress" role="progressbar">
+                <div class="progress-bar section__choose-us__3__bar--ux"></div>
+              </div>
+            </div>
+            <div>
+              <h3>Development</h3>
+              <div class="progress" role="progressbar">
+                <div class="progress-bar section__choose-us__3__bar--dev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__our-team">
+        <h2>Our Team</h2>
+        <div class="section__our-team__photos">
+          <div class="card">
+            <img
+              src="/assets/img/avatar-person.jpeg"
+              class="card-img-top"
+              alt="Photo of Person"
+            />
+            <div class="card-body">
+              <div class="card-text">
+                <h4>Johne Doe</h4>
+                <p>Creative</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/assets/img/avatar-person.jpeg"
+              class="card-img-top"
+              alt="Photo of Person"
+            />
+            <div class="card-body">
+              <div class="card-text">
+                <h4>Jenn Doe</h4>
+                <p>Programmer</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/assets/img/avatar-person.jpeg"
+              class="card-img-top"
+              alt="Photo of Person"
+            />
+            <div class="card-body">
+              <div class="card-text">
+                <h4>Superman</h4>
+                <p>CEO</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/assets/img/avatar-person.jpeg"
+              class="card-img-top"
+              alt="Photo of Person"
+            />
+            <div class="card-body">
+              <div class="card-text">
+                <h4>Mah Doe</h4>
+                <p>Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__grid-container main-container">
+        <div class="footer__item">
+          <div class="footer__item__head">Our Contact</div>
+          <div class="footer__item__body">
+            <div class="footer__item__body__company-address">
+              <p class="footer__item__body--bold">My Company</p>
+              <p>My Company Address</p>
+              <p>Pin-21542 Indonesia ID</p>
+            </div>
+            <div class="footer__item__body__contacts">
+              <p>(123)456-789 - 1255-12584</p>
+              <p>
+                <a href="mailto:email@domainname.com">email@domainname.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Quick Links</div>
+          <div class="footer__item__body">
+            <a href="#">Latest Events</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Career</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Latest Posts</div>
+          <div class="footer__item__body">
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Recent News</div>
+          <div class="footer__item__body">
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__extras main-container">
+        <p class="footer__extras__copyright">
+          &copy; My Company Site. All rights reserved. Template By example
+        </p>
+        <div class="footer__extras__socials">
+          <img
+            src="/assets/img/icons-svg/facebook-white.svg"
+            alt="facebook-link"
+          />
+          <img
+            src="/assets/img/icons-svg/twitter-white.svg"
+            alt="twitter-link"
+          />
+          <img
+            src="/assets/img/icons-svg/linkedin-white.svg"
+            alt="linkedin-link"
+          />
+          <img
+            src="/assets/img/icons-svg/pinterest-white.svg"
+            alt="pinterest-link"
+          />
+          <img
+            src="/assets/img/icons-svg/googleplus-white.svg"
+            alt="googleplus-link"
+          />
+        </div>
+      </div>
+    </footer>
+    <button
+      type="button"
+      class="btn"
+      id="btn-back-to-top"
+      onclick="scrollToTop()"
+    >
+      <img
+        src="/assets/img/icons-svg/right-chevron-white.svg"
+        style="transform: rotate(-90deg)"
+      />
+    </button>
+  </body>
+  <script src="/assets/js/navbar-login.js"></script>
+  <script src="/assets/js/scrollToTop.js"></script>
+</html>

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+body {
+  margin: 2rem auto;
+  font-family: "JetBrains Mono", monospace;
+}
+
+nav,
+h1 {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.btn {
+  background-color: #2d3146;
+  border: none;
+  width: 100%;
+}
+
+.tracker-card {
+  margin: 0 auto;
+  width: 30rem;
+  height: fit-content;
+  border: none;
+  border-top-right-radius: 4rem 6rem;
+  border-bottom-right-radius: 1rem 2rem;
+  border-bottom-left-radius: 3rem 4rem;
+  border-top-left-radius: 2rem 2rem;
+  box-shadow: 5px 5px 10px 5px #c0c0c0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  h4 {
+    border-bottom: 1px solid grey;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__total-balance {
+    font-size: 2rem;
+    font-weight: 600;
+    &--rupiah::before {
+      content: "Rp ";
+    }
+
+    .negative::before {
+      content: "-Rp ";
+    }
+  }
+
+  &__income-expense {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 80%;
+
+    .vertical-border {
+      border-right: 2px solid grey;
+    }
+
+    &__item {
+      font-size: 1.25rem;
+      &--income--rupiah {
+        color: rgb(28, 202, 28);
+        &::before {
+          content: "+Rp ";
+        }
+      }
+      &--expense--rupiah {
+        color: rgb(184, 3, 3);
+        &::before {
+          content: "-Rp ";
+        }
+      }
+    }
+  }
+  &__history {
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+      height: 2rem;
+      align-items: center;
+
+      &__value {
+        padding: 0.5rem;
+      }
+    }
+
+    .income {
+      border-right: 3px solid rgb(28, 202, 28);
+      &::before {
+        content: "+";
+      }
+    }
+    .expense {
+      border-right: 3px solid rgb(184, 3, 3);
+      &::before {
+        content: "-";
+      }
+    }
+  }
+}

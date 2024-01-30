@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Web Basic</title>
+
+    <!-- Bootstrap Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg main-container">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >Home</a
+            >
+            <a class="nav-link" href="/html/about_us.html">About Us</a>
+            <a class="nav-link" href="/html/courses.html">Courses</a>
+            <a class="nav-link" href="/html/portfolio.html">Portfolio</a>
+            <a class="nav-link" href="/html/contact.html">Contact</a>
+            <a
+              class="nav-link is-not-logged"
+              id="tracker-nav"
+              href="/html/tracker.html"
+              >Tracker</a
+            >
+            <a class="nav-link is-logged" id="login-nav" href="/html/login.html"
+              >Login</a
+            >
+            <a
+              class="nav-link is-logged"
+              id="register-nav"
+              href="/html/register.html"
+              >Register</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carousel"
+      class="carousel slide hero-carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/img/slides/1.jpg"
+            class="d-block w-100"
+            alt="first slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption__textblock">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/img/slides/2.jpg"
+            class="d-block w-100"
+            alt="second slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption__textblock">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/img/slides/3.jpg"
+            class="d-block w-100"
+            alt="third slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption__textblock">
+              <h5>College Education</h5>
+              <p>Awesome template get it now</p>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                See Pricing
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="pricingModal"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title" id="pricingModal">Pricing</h1>
+                    </div>
+                    <div class="modal-body">
+                      <div class="card-group">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Basic</h5>
+                            <p class="card-text">$15.00 / Year</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Responsive Design</li>
+                            <li class="list-group-item">Bootstrap Design</li>
+                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">Free Trial version</li>
+                            <li class="list-group-item">HTML5 CSS3 jQuery</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary">
+                              Get Now
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Standard</h5>
+                            <p class="card-text">$20.00 / Year</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Responsive Design</li>
+                            <li class="list-group-item">Bootstrap Design</li>
+                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">Free Trial version</li>
+                            <li class="list-group-item">HTML5 CSS3 jQuery</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary">
+                              Get Now
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Advanced</h5>
+                            <p class="card-text">$15.00 / Year</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Responsive Design</li>
+                            <li class="list-group-item">Bootstrap Design</li>
+                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">Free Trial version</li>
+                            <li class="list-group-item">HTML5 CSS3 jQuery</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary">
+                              Get Now
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Mighty</h5>
+                            <p class="card-text">$15.00 / Year</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Responsive Design</li>
+                            <li class="list-group-item">Bootstrap Design</li>
+                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">Free Trial version</li>
+                            <li class="list-group-item">HTML5 CSS3 jQuery</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary">
+                              Get Now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="featured-courses main-container">
+      <div class="featured-courses__head">
+        <h2>Our Featured Courses</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lacus
+          magna. Morbi consectetur quam odio, ut scelerisque neque facilisis at.
+          Fusce nulla elit, rhoncus ac venenatis sit amet, convallis sed urna.
+          Integer nec scelerisque leo.
+        </p>
+      </div>
+      <div class="featured-courses__cards">
+        <div class="card">
+          <img
+            src="assets/img/icons-svg/trophy-white.svg"
+            class="card-img-top card-img-top--red"
+            alt="tropy-icon-white"
+          />
+          <div class="card-body">
+            <h3 class="card-body__head">Web Development</h3>
+            <p class="card-body__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/img/icons-svg/image-white.svg"
+            class="card-img-top card-img-top--purple"
+            alt="image-icon-white"
+          />
+          <div class="card-body">
+            <h3 class="card-body__head">UI Design</h3>
+            <p class="card-body__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/img/icons-svg/desktop-white.svg"
+            class="card-img-top card-img-top--green"
+            alt="desktop-icon-white"
+          />
+          <div class="card-body">
+            <h3 class="card-body__head">Interaction</h3>
+            <p class="card-body__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/img/icons-svg/globe-white.svg"
+            class="card-img-top card-img-top--blue"
+            alt="globe-icon-white"
+          />
+          <div class="card-body">
+            <h3 class="card-body__head">User Experience</h3>
+            <p class="card-body__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              venenatis interdum ex, vitae laoreet eros consequat sed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimony-carousel">
+      <div
+        id="testimony-carousel"
+        class="carousel slide main-container"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>
+              Praesent quis diam ultrices, molestie velit id, dapibus odio. Nam
+              neque felis, cursus at purus sed, cursus accumsan erat. Phasellus
+              mattis rutrum bibendum. Aliquam accumsan ante massa, consequat
+              dictum nulla porttitor et. Phasellus scelerisque gravida libero
+              nec interdum.
+            </p>
+            <h4>Jaison Warner</h4>
+          </div>
+          <div class="carousel-item">
+            <p>
+              Praesent quis diam ultrices, molestie velit id, dapibus odio. Nam
+              neque felis, cursus at purus sed, cursus accumsan erat. Phasellus
+              mattis rutrum bibendum. Aliquam accumsan ante massa, consequat
+              dictum nulla porttitor et. Phasellus scelerisque gravida libero
+              nec interdum.
+            </p>
+            <h4>Jaison Warner</h4>
+          </div>
+          <div class="carousel-item">
+            <p>
+              Praesent quis diam ultrices, molestie velit id, dapibus odio. Nam
+              neque felis, cursus at purus sed, cursus accumsan erat. Phasellus
+              mattis rutrum bibendum. Aliquam accumsan ante massa, consequat
+              dictum nulla porttitor et. Phasellus scelerisque gravida libero
+              nec interdum.
+            </p>
+            <h4>Jaison Warner</h4>
+          </div>
+          <div class="carousel-item">
+            <p>
+              Praesent quis diam ultrices, molestie velit id, dapibus odio. Nam
+              neque felis, cursus at purus sed, cursus accumsan erat. Phasellus
+              mattis rutrum bibendum. Aliquam accumsan ante massa, consequat
+              dictum nulla porttitor et. Phasellus scelerisque gravida libero
+              nec interdum.
+            </p>
+            <h4>Jaison Warner</h4>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#testimony-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimony-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimony-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#testimony-carousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimony-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimony-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="courses-offer main-container">
+      <div class="courses-offer__head">
+        <h2>Courses We Offer</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+          elementum mauris nunc, nec aliquam lectus suscipit a. Donec id luctus
+          elit, id convallis lorem. Aenean vel eros sed tortor porttitor commodo
+          in vitae elit. Vivamus tincidunt, urna quis posuere condimentum, orci
+          lectus convallis risus, commodo pulvinar quam dolor non eros. Nam
+          mauris ligula, vehicula ut commodo non, ultricies vitae velit.
+        </p>
+      </div>
+      <div class="courses-offer__body">
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+        <div class="courses-offer__body__item">
+          <h3>Heading Course</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            venenatis interdum ex, vitae laoreet eros consequat sed. Nunc
+            elementum mauris nunc, nec aliquam lectus suscipit a.
+          </p>
+        </div>
+      </div>
+    </section>
+    <button
+      type="button"
+      class="btn"
+      id="btn-back-to-top"
+      onclick="scrollToTop()"
+    >
+      <img
+        src="/assets/img/icons-svg/right-chevron-white.svg"
+        style="transform: rotate(-90deg)"
+      />
+    </button>
+    <footer class="footer">
+      <div class="footer__grid-container main-container">
+        <div class="footer__item">
+          <div class="footer__item__head">Our Contact</div>
+          <div class="footer__item__body">
+            <div class="footer__item__body__company-address">
+              <p class="footer__item__body--bold">My Company</p>
+              <p>My Company Address</p>
+              <p>Pin-21542 Indonesia ID</p>
+            </div>
+            <div class="footer__item__body__contacts">
+              <p>(123)456-789 - 1255-12584</p>
+              <p>
+                <a href="mailto:email@domainname.com">email@domainname.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Quick Links</div>
+          <div class="footer__item__body">
+            <a href="#">Latest Events</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Career</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Latest Posts</div>
+          <div class="footer__item__body">
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__item__head">Recent News</div>
+          <div class="footer__item__body">
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</a
+            >
+            <a href="#"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__extras main-container">
+        <p class="footer__extras__copyright">
+          &copy; My Company Site. All rights reserved. Template By example
+        </p>
+        <div class="footer__extras__socials">
+          <img
+            src="/assets/img/icons-svg/facebook-white.svg"
+            alt="facebook-link"
+          />
+          <img
+            src="/assets/img/icons-svg/twitter-white.svg"
+            alt="twitter-link"
+          />
+          <img
+            src="/assets/img/icons-svg/linkedin-white.svg"
+            alt="linkedin-link"
+          />
+          <img
+            src="/assets/img/icons-svg/pinterest-white.svg"
+            alt="pinterest-link"
+          />
+          <img
+            src="/assets/img/icons-svg/googleplus-white.svg"
+            alt="googleplus-link"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/assets/js/navbar-login.js"></script>
+  <script src="/assets/js/scrollToTop.js"></script>
+</html>

@@ -1,0 +1,45 @@
+.contact {
+  &__map {
+    iframe {
+      width: 100%;
+      height: 30rem;
+    }
+  }
+
+  &__bottom-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem auto 2rem auto;
+
+    label::after {
+      content: "*";
+      color: red;
+    }
+    input,
+    textarea {
+      border-radius: 0;
+    }
+
+    &__info {
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      &__extra {
+        font-size: 0.85rem;
+        margin-top: 1rem;
+        &--bold {
+          font-weight: 700;
+        }
+        &--boldstrong {
+          font-weight: 800;
+          color: black;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
